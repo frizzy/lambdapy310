@@ -1,0 +1,23 @@
+{
+	"name": "aws-lambda-python-3.9",
+	"dockerComposeFile": "docker-compose.yml",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"service": "devcontainer",
+	"shutdownAction": "stopCompose",
+	"remoteUser": "vscode",
+	"overrideCommand": false,
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind,consistency=delegated",
+		"source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=delegated"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.autopep8",
+				"charliermarsh.ruff",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
+}

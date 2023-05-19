@@ -1,0 +1,12 @@
+---
+
+version: "3.8"
+
+services:
+  devcontainer:
+    image: aws-lambda-devcontainer-python3.10
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # volumes:
+    #   - ../..:/workspaces:cached
